@@ -4,8 +4,8 @@ import UserTypeCard from "./user-type-card";
 
 type Props = {
   register: UseFormRegister<FieldValues>;
-  userType: "owner" | "student";
-  setUserType: React.Dispatch<React.SetStateAction<"owner" | "student">>;
+  userType: "owner" | "worker";
+  setUserType: React.Dispatch<React.SetStateAction<"owner" | "worker">>;
 };
 
 const TypeSelectionForm = ({ register, userType, setUserType }: Props) => {
@@ -25,9 +25,9 @@ const TypeSelectionForm = ({ register, userType, setUserType }: Props) => {
             setUserType={setUserType}
         ></UserTypeCard>
         <UserTypeCard
-            value="student"
-            title="I’m a student."
-            text="Looking to learn about the tool."
+            value="worker"
+            title="I’m a worker."
+            text="Looking to manage my taxes and personal finances."
             register={register}
             userType={userType}
             setUserType={setUserType}

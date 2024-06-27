@@ -27,7 +27,7 @@ const RegistrationFormStep = (props: Props) => {
 
   const { currentStep } = useAuthContextHook();
   const [onOTP, setOnOTP] = useState<string>("");
-  const [onUserType, setOnUserType] = useState<"owner" | "student">("owner");
+  const [onUserType, setOnUserType] = useState<"owner" | "worker">("owner");
   setValue("otp", onOTP);
 
   switch (currentStep) {
